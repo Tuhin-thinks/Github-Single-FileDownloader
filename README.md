@@ -7,4 +7,5 @@ Current view:
 </p>
 
 <hr>
+
 *Lot to cover!*
