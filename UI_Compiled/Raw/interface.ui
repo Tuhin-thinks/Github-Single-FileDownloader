@@ -6,16 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>910</width>
-    <height>629</height>
+    <width>972</width>
+    <height>645</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Downloader</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
      <widget class="QFrame" name="frame_left_main">
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -61,8 +61,8 @@
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>506</width>
-               <height>453</height>
+               <width>552</width>
+               <height>271</height>
               </rect>
              </property>
             </widget>
@@ -76,7 +76,7 @@
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>256</height>
+           <height>450</height>
           </size>
          </property>
          <property name="frameShape">
@@ -85,52 +85,87 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <layout class="QGridLayout" name="gridLayout_5">
+         <layout class="QGridLayout" name="gridLayout_7">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>9</number>
+          </property>
           <item row="0" column="0">
-           <layout class="QGridLayout" name="gridLayout_2">
-            <item row="1" column="1">
-             <widget class="QPushButton" name="pushButton_start_process">
-              <property name="text">
-               <string>Start process</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>40</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item row="0" column="0" colspan="2">
-             <widget class="QFrame" name="frame_3">
-              <property name="frameShape">
-               <enum>QFrame::NoFrame</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-              <layout class="QGridLayout" name="gridLayout_3">
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_2">
-                 <property name="text">
-                  <string>Link Manipulator</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QLineEdit" name="lineEdit_global_manipulator"/>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QScrollArea" name="scrollArea_2">
+            <property name="minimumSize">
+             <size>
+              <width>450</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>570</width>
+               <height>193</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item row="2" column="0" alignment="Qt::AlignHCenter">
+           <widget class="QPushButton" name="pushButton_start_process">
+            <property name="minimumSize">
+             <size>
+              <width>70</width>
+              <height>70</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>70</width>
+              <height>70</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>start executing added jobs</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+	border: 1px solid grey;
+	background-color: white;
+	border-radius: 35;
+}
+QPushButton::hover:!pressed{
+	border: 1px solid black;
+}
+QPushButton::pressed{
+	border: 2px solid black;
+	padding: 5px;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="icons_qrc.qrc">
+              <normaloff>:/icons/icons/check.svg</normaloff>:/icons/icons/check.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>32</width>
+              <height>32</height>
+             </size>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -138,21 +173,181 @@
       </layout>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_new_rows">
-      <property name="text">
-       <string>Add
-New Rows</string>
+    <item row="0" column="1" colspan="2">
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
       </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="1">
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_new_regex_row">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="icons_qrc.qrc">
+              <normaloff>:/icons/icons/plus-square.svg</normaloff>:/icons/icons/plus-square.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_export">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="icons_qrc.qrc">
+              <normaloff>:/icons/icons/external-link.svg</normaloff>:/icons/icons/external-link.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QFrame" name="frame_4">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_new_rows">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="icons_qrc.qrc">
+              <normaloff>:/icons/icons/plus-square.svg</normaloff>:/icons/icons/plus-square.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
-    <item>
+    <item row="0" column="3">
      <widget class="QFrame" name="frame_2">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>320</width>
+        <height>0</height>
+       </size>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -161,8 +356,29 @@ New Rows</string>
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <item row="0" column="0">
         <widget class="QListWidget" name="listWidget_status">
+         <property name="minimumSize">
+          <size>
+           <width>250</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="spacing">
           <number>5</number>
          </property>
@@ -178,13 +394,23 @@ New Rows</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>910</width>
+     <width>972</width>
      <height>22</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <tabstops>
+  <tabstop>scrollArea_2</tabstop>
+  <tabstop>pushButton_start_process</tabstop>
+  <tabstop>pushButton_new_rows</tabstop>
+  <tabstop>listWidget_status</tabstop>
+  <tabstop>pushButton_new_regex_row</tabstop>
+  <tabstop>scrollArea</tabstop>
+ </tabstops>
+ <resources>
+  <include location="icons_qrc.qrc"/>
+ </resources>
  <connections/>
 </ui>
